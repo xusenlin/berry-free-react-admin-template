@@ -12,7 +12,7 @@ import PopupState, { bindPopper, bindToggle } from 'material-ui-popup-state';
 import Transitions from 'ui-component/extended/Transitions';
 
 // assets
-import { IconAdjustmentsHorizontal, IconSearch, IconX } from '@tabler/icons';
+import { IconSearch } from '@tabler/icons';
 import { shouldForwardProp } from '@mui/system';
 
 // styles
@@ -29,6 +29,7 @@ const PopperStyle = styled(Popper, { shouldForwardProp })(({ theme }) => ({
 const OutlineInputStyle = styled(OutlinedInput, { shouldForwardProp })(({ theme }) => ({
     width: 434,
     marginLeft: 16,
+    height: 40,
     paddingLeft: 16,
     paddingRight: 16,
     '& input': {
@@ -58,7 +59,7 @@ const HeaderAvatarStyle = styled(Avatar, { shouldForwardProp })(({ theme }) => (
 
 // ==============================|| SEARCH INPUT - MOBILE||============================== //
 
-const MobileSearch = ({ value, setValue, popupState }) => {
+const MobileSearch = ({ value, setValue }) => {
     const theme = useTheme();
 
     return (
@@ -70,35 +71,6 @@ const MobileSearch = ({ value, setValue, popupState }) => {
             startAdornment={
                 <InputAdornment position="start">
                     <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
-                </InputAdornment>
-            }
-            endAdornment={
-                <InputAdornment position="end">
-                    <ButtonBase sx={{ borderRadius: '12px' }}>
-                        <HeaderAvatarStyle variant="rounded">
-                            <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-                        </HeaderAvatarStyle>
-                    </ButtonBase>
-                    <Box sx={{ ml: 2 }}>
-                        <ButtonBase sx={{ borderRadius: '12px' }}>
-                            <Avatar
-                                variant="rounded"
-                                sx={{
-                                    ...theme.typography.commonAvatar,
-                                    ...theme.typography.mediumAvatar,
-                                    background: theme.palette.orange.light,
-                                    color: theme.palette.orange.dark,
-                                    '&:hover': {
-                                        background: theme.palette.orange.dark,
-                                        color: theme.palette.orange.light
-                                    }
-                                }}
-                                {...bindToggle(popupState)}
-                            >
-                                <IconX stroke={1.5} size="1.3rem" />
-                            </Avatar>
-                        </ButtonBase>
-                    </Box>
                 </InputAdornment>
             }
             aria-describedby="search-helper-text"
@@ -170,15 +142,6 @@ const SearchSection = () => {
                     startAdornment={
                         <InputAdornment position="start">
                             <IconSearch stroke={1.5} size="1rem" color={theme.palette.grey[500]} />
-                        </InputAdornment>
-                    }
-                    endAdornment={
-                        <InputAdornment position="end">
-                            <ButtonBase sx={{ borderRadius: '12px' }}>
-                                <HeaderAvatarStyle variant="rounded">
-                                    <IconAdjustmentsHorizontal stroke={1.5} size="1.3rem" />
-                                </HeaderAvatarStyle>
-                            </ButtonBase>
                         </InputAdornment>
                     }
                     aria-describedby="search-helper-text"

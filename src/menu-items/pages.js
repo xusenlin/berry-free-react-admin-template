@@ -1,41 +1,44 @@
 // assets
-import { IconKey } from '@tabler/icons';
+import { IconCategory, IconCode, IconDashboard, IconUsers } from '@tabler/icons';
 
-// constant
-const icons = {
-    IconKey
-};
-
-// ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
+// ==============================|| DASHBOARD MENU ITEMS ||============================== //
 
 const pages = {
     id: 'pages',
-    title: 'Pages',
-    caption: 'Pages Caption',
     type: 'group',
     children: [
         {
-            id: 'authentication',
-            title: 'Authentication',
-            type: 'collapse',
-            icon: icons.IconKey,
-
-            children: [
-                {
-                    id: 'login3',
-                    title: 'Login',
-                    type: 'item',
-                    url: '/pages/login/login3',
-                    target: true
-                },
-                {
-                    id: 'register3',
-                    title: 'Register',
-                    type: 'item',
-                    url: '/pages/register/register3',
-                    target: true
-                }
-            ]
+            id: 'default',
+            title: 'Dashboard',
+            type: 'item',
+            url: '/dashboard/default',
+            icon: IconDashboard,
+            breadcrumbs: false
+        },
+        {
+            id: 'repositories',
+            title: 'Repositories',
+            type: 'item',
+            url: '/dashboard/default',
+            icon: IconCode,
+            breadcrumbs: false
+        },
+        {
+            id: 'categories',
+            title: 'Categories',
+            type: 'item',
+            url: '/dashboard/default',
+            icon: IconCategory,
+            breadcrumbs: false
+        },
+        ,
+        {
+            id: 'users',
+            title: 'Users',
+            type: 'item',
+            url: '/dashboard/default',
+            icon: IconUsers,
+            breadcrumbs: false
         }
     ]
 };

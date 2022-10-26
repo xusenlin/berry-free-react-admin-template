@@ -41,6 +41,7 @@ export default function themePalette(theme) {
         success: {
             light: theme.colors?.successLight,
             200: theme.colors?.success200,
+            800: theme.colors?.success800,
             main: theme.colors?.successMain,
             dark: theme.colors?.successDark
         },

@@ -3,19 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
-import {
-    Drawer,
-    Fab,
-    FormControl,
-    FormControlLabel,
-    Grid,
-    IconButton,
-    Radio,
-    RadioGroup,
-    Slider,
-    Tooltip,
-    Typography
-} from '@mui/material';
+import { Avatar, Box, ButtonBase, Drawer, FormControl, FormControlLabel, Grid, Radio, RadioGroup, Slider, Typography } from '@mui/material';
 import { IconSettings } from '@tabler/icons';
 
 // third-party
@@ -23,7 +11,6 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 
 // project imports
 import SubCard from 'ui-component/cards/SubCard';
-import AnimateButton from 'ui-component/extended/AnimateButton';
 import { SET_BORDER_RADIUS, SET_FONT_FAMILY } from 'store/actions';
 import { gridSpacing } from 'store/constant';
 
@@ -90,34 +77,36 @@ const Customization = () => {
 
     return (
         <>
-            {/* toggle button */}
-            <Tooltip title="Live Customize">
-                <Fab
-                    component="div"
-                    onClick={handleToggle}
-                    size="medium"
-                    variant="circular"
-                    color="secondary"
-                    sx={{
-                        borderRadius: 0,
-                        borderTopLeftRadius: '50%',
-                        borderBottomLeftRadius: '50%',
-                        borderTopRightRadius: '50%',
-                        borderBottomRightRadius: '4px',
-                        top: '25%',
-                        position: 'fixed',
-                        right: 10,
-                        zIndex: theme.zIndex.speedDial
-                    }}
-                >
-                    <AnimateButton type="rotate">
-                        <IconButton color="inherit" size="large" disableRipple>
-                            <IconSettings />
-                        </IconButton>
-                    </AnimateButton>
-                </Fab>
-            </Tooltip>
-
+            <Box
+                sx={{
+                    ml: 1,
+                    mr: 1,
+                    [theme.breakpoints.down('md')]: {
+                        mr: 1
+                    }
+                }}
+            >
+                <ButtonBase sx={{ borderRadius: '12px' }}>
+                    <Avatar
+                        variant="rounded"
+                        sx={{
+                            ...theme.typography.commonAvatar,
+                            ...theme.typography.mediumAvatar,
+                            transition: 'all .2s ease-in-out',
+                            background: theme.palette.secondary.light,
+                            color: theme.palette.secondary.dark,
+                            '&[aria-controls="menu-list-grow"],&:hover': {
+                                background: theme.palette.secondary.dark,
+                                color: theme.palette.secondary.light
+                            }
+                        }}
+                        onClick={handleToggle}
+                        color="inherit"
+                    >
+                        <IconSettings stroke={1.5} size="1.3rem" />
+                    </Avatar>
+                </ButtonBase>
+            </Box>
             <Drawer
                 anchor="right"
                 onClose={handleToggle}

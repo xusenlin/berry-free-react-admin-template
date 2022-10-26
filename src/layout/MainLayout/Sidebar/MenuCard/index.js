@@ -60,7 +60,7 @@ function LinearProgressWithLabel({ value, ...others }) {
                 <Grid container justifyContent="space-between">
                     <Grid item>
                         <Typography variant="h6" sx={{ color: theme.palette.primary[800] }}>
-                            Progress
+                            Used
                         </Typography>
                     </Grid>
                     <Grid item>
@@ -109,7 +109,7 @@ const MenuCard = () => {
                             sx={{ mt: 0 }}
                             primary={
                                 <Typography variant="subtitle1" sx={{ color: theme.palette.primary[800] }}>
-                                    Get Extra Space
+                                    Disk Space
                                 </Typography>
                             }
                             secondary={<Typography variant="caption"> 28/23 GB</Typography>}
