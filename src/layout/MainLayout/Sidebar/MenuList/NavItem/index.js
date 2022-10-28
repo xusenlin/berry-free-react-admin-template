@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { forwardRef, useEffect } from 'react';
+import { forwardRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -50,18 +50,6 @@ const NavItem = ({ item, level }) => {
         dispatch({ type: MENU_OPEN, id });
         if (matchesSM) dispatch({ type: SET_MENU, opened: false });
     };
-
-    // active menu item on page load
-    useEffect(() => {
-        const currentIndex = document.location.pathname
-            .toString()
-            .split('/')
-            .findIndex((id) => id === item.id);
-        if (currentIndex > -1) {
-            dispatch({ type: MENU_OPEN, id: item.id });
-        }
-        // eslint-disable-next-line
-    }, []);
 
     return (
         <ListItemButton

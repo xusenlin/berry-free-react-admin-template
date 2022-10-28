@@ -9,20 +9,18 @@ const tasks = {
     type: 'group',
     children: [
         {
-            id: 'util-typography',
-            title: 'Typography',
+            id: 'tasks1',
+            title: 'Test',
             type: 'item',
-            url: '/utils/util-typography',
-            icon: IconPoint,
-            breadcrumbs: false
+            url: '/tasks',
+            icon: IconPoint
         },
         {
-            id: 'util-color',
-            title: 'Color',
+            id: 'tasks2',
+            title: 'DevK8s',
             type: 'item',
-            url: '/utils/util-color',
-            icon: IconPoint,
-            breadcrumbs: false
+            url: '/tasks',
+            icon: IconPoint
         }
     ]
 };

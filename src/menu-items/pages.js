@@ -8,37 +8,32 @@ const pages = {
     type: 'group',
     children: [
         {
-            id: 'default',
+            id: 'dashboard',
             title: 'Dashboard',
             type: 'item',
-            url: '/dashboard/default',
-            icon: IconDashboard,
-            breadcrumbs: false
+            url: '/dashboard',
+            icon: IconDashboard
         },
         {
             id: 'repositories',
             title: 'Repositories',
             type: 'item',
-            url: '/dashboard/default',
-            icon: IconCode,
-            breadcrumbs: false
+            url: '/repositories',
+            icon: IconCode
         },
         {
             id: 'categories',
             title: 'Categories',
             type: 'item',
-            url: '/dashboard/default',
-            icon: IconCategory,
-            breadcrumbs: false
+            url: '/categories',
+            icon: IconCategory
         },
-        ,
         {
             id: 'users',
             title: 'Users',
             type: 'item',
-            url: '/dashboard/default',
-            icon: IconUsers,
-            breadcrumbs: false
+            url: '/users',
+            icon: IconUsers
         }
     ]
 };

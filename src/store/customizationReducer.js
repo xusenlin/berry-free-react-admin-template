@@ -4,8 +4,10 @@ import config from 'config';
 // action - state management
 import * as actionTypes from './actions';
 
+const pathname = document.location.pathname.slice(1) || null;
+
 export const initialState = {
-    isOpen: [], // for active default menu
+    isOpen: pathname ? [pathname] : [], // for active default menu
     fontFamily: config.fontFamily,
     borderRadius: config.borderRadius,
     opened: true

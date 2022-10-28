@@ -3,6 +3,8 @@ import { Typography } from '@mui/material';
 
 // project imports
 import NavGroup from './NavGroup';
+import TaskGroup from './TaskGroup';
+
 import menuItem from 'menu-items';
 
 // ==============================|| SIDEBAR MENU LIST ||============================== //
@@ -21,7 +23,12 @@ const MenuList = () => {
         }
     });
 
-    return <>{navItems}</>;
+    return (
+        <>
+            {navItems}
+            {<TaskGroup />}
+        </>
+    );
 };
 
 export default MenuList;
