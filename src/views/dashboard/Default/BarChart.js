@@ -93,7 +93,7 @@ const BarChart = ({ isLoading }) => {
                                 </Grid>
                             </Grid>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} sx={{ overflow: 'hidde' }}>
                             <Chart {...chartData} />
                         </Grid>
                     </Grid>

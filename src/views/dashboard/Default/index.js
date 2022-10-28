@@ -35,7 +35,7 @@ const Dashboard = () => {
             </Grid>
             <Grid item xs={12}>
                 <Grid container spacing={gridSpacing}>
-                    <Grid item xs={24} md={24}>
+                    <Grid item xs={12} md={12}>
                         <BarChart isLoading={isLoading} />
                     </Grid>
                 </Grid>

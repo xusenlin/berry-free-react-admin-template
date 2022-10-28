@@ -5,8 +5,8 @@ import Loadable from 'ui-component/Loadable';
 import MinimalLayout from 'layout/MinimalLayout';
 
 // login option 3 routing
-const AuthLogin = Loadable(lazy(() => import('views/pages/authentication/authentication3/Login3')));
-const AuthRegister = Loadable(lazy(() => import('views/pages/authentication/authentication3/Register3')));
+const AuthLogin = Loadable(lazy(() => import('views/authentication/authentication/Login')));
+const AuthRegister = Loadable(lazy(() => import('views/authentication/authentication/Register')));
 
 // ==============================|| AUTHENTICATION ROUTING ||============================== //
 

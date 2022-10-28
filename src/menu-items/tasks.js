@@ -1,5 +1,5 @@
 // assets
-import { IconCircleDot } from '@tabler/icons';
+import { IconPoint } from '@tabler/icons';
 
 // ==============================|| UTILITIES MENU ITEMS ||============================== //
 
@@ -13,7 +13,7 @@ const tasks = {
             title: 'Typography',
             type: 'item',
             url: '/utils/util-typography',
-            icon: IconCircleDot,
+            icon: IconPoint,
             breadcrumbs: false
         },
         {
@@ -21,7 +21,7 @@ const tasks = {
             title: 'Color',
             type: 'item',
             url: '/utils/util-color',
-            icon: IconCircleDot,
+            icon: IconPoint,
             breadcrumbs: false
         }
     ]
