@@ -40,7 +40,10 @@ const TaskGroup = () => {
             <ListItemIcon sx={{ my: 'auto', minWidth: 36 }}>{<IconPoint />}</ListItemIcon>
             <ListItemText
                 primary={
-                    <Typography variant={'h5'} color="inherit">
+                    <Typography
+                        variant={customization.isOpen.findIndex((id) => id === 'tasks/' + menu.ID) > -1 ? 'h5' : 'body1'}
+                        color="inherit"
+                    >
                         {menu.Name}
                     </Typography>
                 }
